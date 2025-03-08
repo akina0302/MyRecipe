@@ -1,0 +1,60 @@
+
+<h1>レシピ作成</h1>
+<%= form_with model: @recipe, local: true do |f| %>
+ <%# レシピ画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"item-image" %>
+      </div>
+    </div>
+  <div>
+    <%= f.label :name, "料理名" %>
+    <%= f.text_field :name %>
+  </div>
+   <div id="materials">
+    <%= f.fields_for :materials do |m| %>
+      <div class = "material">
+        <%= m.label :name, "材料名" %>
+        <%= m.text_field :material%>
+        <button type="button" id="add-material">材料を追加</button>
+        <button type="button" class="remove-material">削除</button>
+      </div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= f.label :instructions, "作り方" %>
+    <%= f.text_area :instructions %>
+  </div>
+
+  <div>
+    <%= f.label :category_name, "カテゴリー" %>
+    <%= f.select :category_name ,["メイン","サイド","汁物","丼","麺","デザート"]%>
+  </div>
+
+  <div>
+    <%= f.submit "保存" %>
+  </div>
+<% end %>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("add-material").addEventListener("click", function() {
+    let newMaterial = document.querySelector(".material").cloneNode(true);
+    newMaterial.querySelectorAll("input").forEach(input => input.value = "");
+    document.getElementById("materials").appendChild(newMaterial);
+  });
+
+  document.getElementById("materials").addEventListener("click", function(event) {
+    if (event.target.classList.contains("remove-material")) {
+      event.target.closest(".material").remove();
+    }
+  });
+});
+</script>
