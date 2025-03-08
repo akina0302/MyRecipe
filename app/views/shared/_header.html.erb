@@ -1,0 +1,13 @@
+<div>
+<%= link_to "カレンダー" , '#' %>
+</div>
+<div>
+<%= link_to "カテゴリー","#" %> 
+</div>
+<div>
+<%= link_to "マイページ", user_path(current_user.id) %>
+</div>
+<div>
+<%= link_to "ログアウト", destroy_user_session_path,data: {turbo_method: :delete} %> 
+</div>
+
