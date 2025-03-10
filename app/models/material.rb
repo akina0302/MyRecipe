@@ -1,6 +1,3 @@
 class Material < ApplicationRecord
-  has_many :recipe_materials
-  has_many :recipes, through: :recipe_materials
-
-  validates :material, presence: true
+  has_many :recipes
 end
