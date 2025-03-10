@@ -1,5 +1,9 @@
 <h1>レシピ作成</h1>
 <%= form_with model: @recipe_category_material, url: recipes_path , local: true do |f| %>
+
+ <%# エラーメッセージの参照 %>
+ <%= render 'shared/error_messages' , model: f.object %>
+
  <%# レシピ画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
@@ -30,7 +34,7 @@
   </div>
   <div>
     <%= f.label :category, "カテゴリー" %>
-    <%= f.select :category ,["メイン","サイド","汁物","丼","麺","デザート"]%>
+    <%= f.select :category ,[" ","メイン","サイド","汁物","丼","麺","デザート"]%>
   </div>
   <div>
     <%= f.submit "保存" %>
