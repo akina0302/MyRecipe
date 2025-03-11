@@ -1,3 +1,11 @@
-<%= link_to "マイページ", user_path(current_user.id) %>
-<%= link_to "ログイン", new_user_session_path %>
-<%= link_to "ログアウト", destroy_user_session_path,data: {turbo_method: :delete} %> 
+<div class="recipe_container">
+<div class="main_header">
+<%= render "shared/header" %>
+</div>
+<%= link_to "レシピ登録", new_recipe_path%>
+
+一覧
+検索
+
+</div>
+

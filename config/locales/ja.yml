@@ -3,3 +3,9 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
+  activemodel:
+    attributes:
+      recipe_category_material:
+        name: 料理名
+        material_name: メイン食材
+        category_name: カテゴリー

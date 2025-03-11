@@ -1,0 +1,35 @@
+.body {
+  min-height: 100vh;
+}
+
+.body_container{
+  display: flex;
+  flex-direction: column;
+  /* padding: 1rem 0; */
+  width: 100%;
+  max-width: 800px; /* PCでも一定の大きさを保つ */
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.recipe_container{
+  padding: 16px 32px;
+}
+
+
+/* ヘッダー */
+.header-log{
+ font-size: 24px;
+ display: flex;
+ justify-content: center;
+ padding-top: 8px;
+}
+
+/* ヘッダー２ */
+.main_header{
+  font-size: 16px;
+  display: flex;
+  justify-content:space-around;
+  border-bottom: dotted 3px #8ad2ef;
+
+}
