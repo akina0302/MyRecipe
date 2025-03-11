@@ -40,13 +40,13 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_09_083158) do
   end
 
   create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.text "category", null: false
+    t.text "category_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "materials", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.text "material", null: false
+    t.text "material_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

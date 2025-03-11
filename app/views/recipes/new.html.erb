@@ -25,16 +25,16 @@
     <%= f.text_field :url %>
   </div>
   <div>
-    <%= f.label :material, "メイン食材"%>
-    <%= f.text_field :material%>
+    <%= f.label :material_name, "メイン食材"%>
+    <%= f.text_field :material_name%>
   </div>
  <div>
     <%= f.label :procedure, "作り方" %>
     <%= f.text_area :procedure %>
   </div>
   <div>
-    <%= f.label :category, "カテゴリー" %>
-    <%= f.select :category ,[" ","メイン","サイド","汁物","丼","麺","デザート"]%>
+    <%= f.label :category_name, "カテゴリー" %>
+    <%= f.select :category_name ,[" ","メイン","サイド","汁物","丼","麺","デザート"]%>
   </div>
   <div>
     <%= f.submit "保存" %>
