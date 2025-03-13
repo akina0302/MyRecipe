@@ -1,6 +1,6 @@
 class RecipeCategoryMaterial
   include ActiveModel::Model
-  attr_accessor :name, :procedure, :url, :user_id, :category_name, :material_name
+  attr_accessor :name, :procedure, :url, :user_id, :category_name, :material_name, :image
 
   with_options presence: true do
    validates :name 
@@ -21,7 +21,8 @@ class RecipeCategoryMaterial
       url: url,
       user_id: user_id,
       material_id: material.id,
-      category_id: category.id    
+      category_id: category.id ,
+      image: image
       )
   end
 

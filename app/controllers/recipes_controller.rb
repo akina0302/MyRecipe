@@ -1,6 +1,10 @@
 class RecipesController < ApplicationController
 
   def index
+    @recipes = Recipe.all
+  end
+
+  def show
   end
 
   def new
@@ -20,7 +24,7 @@ class RecipesController < ApplicationController
   private 
 
   def recipe_params
-    params.require(:recipe_category_material).permit(:name, :procedure, :url, :category_name, :material_name).merge(user_id: current_user.id)
+    params.require(:recipe_category_material).permit(:name, :procedure, :url, :category_name, :material_name, :image).merge(user_id: current_user.id)
   end
 
 end
