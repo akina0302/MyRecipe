@@ -33,3 +33,26 @@
   border-bottom: dotted 3px #8ad2ef;
 
 }
+
+/* トップページ（レシピ一覧） */
+
+.recipe-lists{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+  width: 100vh;
+  }
+
+.list{
+  width: 37vh;
+  padding: 1vh;
+}
+
+.recipe-img-content {
+  position: relative;
+}
+
+.recipe-img {
+  width: 33vh;
+  height: 33vh;
+}

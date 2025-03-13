@@ -1,11 +1,29 @@
 <div class="recipe_container">
-<div class="main_header">
-<%= render "shared/header" %>
-</div>
-<%= link_to "レシピ登録", new_recipe_path%>
+ <div class="main_header">
+   <%= render "shared/header" %>
+  </div>
+    <%= link_to "レシピ登録", new_recipe_path%>
 
-一覧
-検索
+  <ul class = 'recipe-lists'>
+    <% if @recipes.present? %>
+    <% @recipes.each do |recipe| %>
+        <li class = 'list'>
+           <div class = 'recipe-img-content'>
+           <%= link_to recipe_path(:id) do  %>
+              <% if recipe.image.present?  %>
+              <%= image_tag recipe.image, class: "recipe-img"  %>
+              <%else %>
+              <%= image_tag 'no_imageと書かれたデフォルト画像' %>
+              <% end %>
+           <% end %>
+          </div> 
+          <h3 class = 'recipe-name'>
+            <%= recipe.name%>
+          </h3>
+        </li>
+      <% end %>
+    <% end%>
+  </ul>
 
 </div>
 
