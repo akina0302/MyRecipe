@@ -1,10 +1,7 @@
 class RecipesController < ApplicationController
 
   def index
-    @recipes = Recipe.all
-  end
-
-  def show
+    @recipe = Recipe.where(user_id: current_user.id).all
   end
 
   def new
@@ -19,6 +16,10 @@ class RecipesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
+    @recipe = Recipe.find_by(id: params[:id] , user_id: current_user.id)
   end
     
   private 

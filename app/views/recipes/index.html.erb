@@ -5,11 +5,11 @@
     <%= link_to "レシピ登録", new_recipe_path%>
 
   <ul class = 'recipe-lists'>
-    <% if @recipes.present? %>
-    <% @recipes.each do |recipe| %>
+    <% if @recipe.present? %>
+    <% @recipe.each do |recipe| %>
         <li class = 'list'>
            <div class = 'recipe-img-content'>
-           <%= link_to recipe_path(:id) do  %>
+           <%= link_to recipe_path(recipe) do  %>
               <% if recipe.image.present?  %>
               <%= image_tag recipe.image, class: "recipe-img"  %>
               <%else %>
