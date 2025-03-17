@@ -10,10 +10,10 @@
         <li class = 'list'>
            <div class = 'recipe-img-content'>
            <%= link_to recipe_path(recipe) do  %>
-              <% if recipe.image.present?  %>
+              <% if recipe.image.attached? %>
               <%= image_tag recipe.image, class: "recipe-img"  %>
               <%else %>
-              <%= image_tag 'no_imageと書かれたデフォルト画像' %>
+              <%= image_tag 'no_image.jpg',class: "recipe-img" %>
               <% end %>
            <% end %>
           </div> 
