@@ -39,10 +39,9 @@ class RecipeCategoryMaterial
       url: url,
       user_id: user_id,
       material_id: material.id,
-      category_id: category.id ,
+      category_id: category.id,
+      image: image
       )
-    # 画像が選択されていたら更新
-     recipe.image.attach(image) if image.present?
    end
 
 end
