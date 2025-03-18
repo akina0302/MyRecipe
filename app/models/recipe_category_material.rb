@@ -44,5 +44,6 @@ class RecipeCategoryMaterial
     # 画像が選択されていたら更新
      recipe.image.attach(image) if image.present?
    end
+
 end
 

@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
-
-  before_action :set_recipe, only: [:show, :edit, :update]
+  before_action :set_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :recipe_user, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -41,7 +41,11 @@ class RecipesController < ApplicationController
     else
       render :edit,status: :unprocessable_entity
     end
+  end
 
+  def destroy
+    @recipe.destroy
+    redirect_to root_path
   end
     
   private 
@@ -51,7 +55,14 @@ class RecipesController < ApplicationController
   end
 
   def set_recipe
-    @recipe = Recipe.find_by(id: params[:id] , user_id: current_user.id)
+    @recipe = Recipe.find_by(id: params[:id] )
+    # @recipe = Recipe.find_by(id: params[:id] , user_id: current_user.id)
   end
+
+  def recipe_user
+    unless @recipe.user_id == current_user.id
+      redirect_to root_path
+    end
+  end 
 
 end

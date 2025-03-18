@@ -4,6 +4,8 @@
   </div>
 
 <%= @recipe.name %>
-
 <%= link_to "編集", edit_recipe_path(@recipe.id) %>
+<%= link_to "削除",recipe_path, data: {turbo_method: :delete}%>
+
+
 
