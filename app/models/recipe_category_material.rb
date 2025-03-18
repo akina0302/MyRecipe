@@ -1,6 +1,7 @@
 class RecipeCategoryMaterial
   include ActiveModel::Model
-  attr_accessor :name, :procedure, :url, :user_id, :category_name, :material_name, :image
+  attr_accessor  :name, :procedure, :url, :user_id, :category_name, :material_name,:image,:id,:category_id,:material_id,:created_at,:updated_at
+    
 
   with_options presence: true do
    validates :name 
@@ -26,6 +27,22 @@ class RecipeCategoryMaterial
       )
   end
 
- 
+  def update(recipe_id)
+    recipe = Recipe.find(recipe_id)
+
+
+    material = Material.find_or_create_by(material_name: material_name)
+    category = Category.find_or_create_by(category_name: category_name)
+    recipe.update(
+      name: name,
+      procedure: procedure,
+      url: url,
+      user_id: user_id,
+      material_id: material.id,
+      category_id: category.id,
+      image: image
+      )
+   end
+
 end
 
