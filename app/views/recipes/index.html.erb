@@ -4,9 +4,33 @@
   </div>
     <%= link_to "レシピ登録", new_recipe_path%>
 
-  <%= week_calendar(number_of_weeks: 1) do |date| %>
-  <%= date %>
-  <% end %>  
+<%# カレンダー %>
+  <%= week_calendar(events: @cooking_date) do |date , recipes| %>
+    <%= date %>
+    <% recipes.each do |recipe|%>
+    <div>
+      <%= recipe.name %>
+    </div>
+    <% end %>  
+  <% end%>
+
+<%# 作成日登録フォーム %>
+<%= form_with model: CookingDate, url: cooking_dates_path, local: true do |f| %>
+  <div>
+    <%= f.label :date, "日付" %>
+    <%= f.date_field :date %>
+  </div>
+  <div>
+    <%= f.label :recipe_id, "料理名" %>
+    <%= f.collection_select :recipe_id, Recipe.where(user_id: current_user.id), :id, :name ,prompt:"献立を選択"%>
+  </div>
+  <div>
+    <%= f.submit "登録" %>
+  </div>
+<% end %>
+
+
+<%# レシピ一覧 %>
 
   <ul class = 'recipe-lists'>
     <% if @recipe.present? %>
