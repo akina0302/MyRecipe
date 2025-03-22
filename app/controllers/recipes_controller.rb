@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipe = Recipe.where(user_id: current_user.id).all
+    @cooking_dates = CookingDate.where(user_id: current_user.id).all
   end
 
   def new

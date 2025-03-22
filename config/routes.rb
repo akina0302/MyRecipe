@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root to:'recipes#index'
   resources :users, only: :show
   resources :recipes
+  resources :cooking_dates, only: :create
 end
 
