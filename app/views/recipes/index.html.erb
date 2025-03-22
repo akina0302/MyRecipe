@@ -4,30 +4,33 @@
   </div>
     <%= link_to "レシピ登録", new_recipe_path%>
 
-<%# カレンダー %>
-  <%= week_calendar(events: @cooking_date) do |date , recipes| %>
-    <%= date %>
-    <% recipes.each do |recipe|%>
-    <div>
-      <%= recipe.name %>
-    </div>
-    <% end %>  
-  <% end%>
-
 <%# 作成日登録フォーム %>
-<%= form_with model: CookingDate, url: cooking_dates_path, local: true do |f| %>
+<%= form_with model:CookingDate , url: cooking_dates_path, local: true do |f| %>
   <div>
-    <%= f.label :date, "日付" %>
-    <%= f.date_field :date %>
+    <%= f.label :start_time,"日付" %>
+    <%= f.date_field :start_time %>
   </div>
   <div>
-    <%= f.label :recipe_id, "料理名" %>
-    <%= f.collection_select :recipe_id, Recipe.where(user_id: current_user.id), :id, :name ,prompt:"献立を選択"%>
+    <%= f.label :recipe_ids,"献立を選択" %>
+   <%= f.collection_select :recipe_ids, Recipe.where(user_id: current_user.id), :id, :name, {} ,multiple: true %>
+
   </div>
   <div>
     <%= f.submit "登録" %>
   </div>
 <% end %>
+
+<%# カレンダー %>
+  <%= week_calendar(events:@cooking_dates) do |date,cooking_dates| %>
+   <%= date %> 
+      <ul>
+        <% (cooking_dates || []).each do |cooking_date| %> 
+         <% cooking_date.recipes.each do |recipe|%>
+         <li><%= link_to recipe.name , recipe_path(recipe) %></li> 
+         <% end %>        
+        <% end %>
+      </ul>
+  <% end %> 
 
 
 <%# レシピ一覧 %>

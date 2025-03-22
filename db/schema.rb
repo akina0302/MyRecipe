@@ -47,10 +47,10 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_21_182033) do
 
   create_table "cooking_dates", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "start_time", null: false
-    t.bigint "recipe_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["recipe_id"], name: "index_cooking_dates_on_recipe_id"
+    t.index ["user_id"], name: "index_cooking_dates_on_user_id"
   end
 
   create_table "materials", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
@@ -97,7 +97,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_21_182033) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "cooking_dates", "recipes"
+  add_foreign_key "cooking_dates", "users"
   add_foreign_key "recipe_cookingdates", "cooking_dates"
   add_foreign_key "recipe_cookingdates", "recipes"
   add_foreign_key "recipes", "categories"
