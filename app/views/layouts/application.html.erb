@@ -8,19 +8,21 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Roboto:ital,wght@0,100;1,100&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+  <body class= "body_container">
+  <div class = "main_container">
     <header>
-      <div class="header-log">
+      <h1>
         <%= link_to "MyRecipe",root_path %>
-      </div>
+      </h1>
     </header>
 
-    <div class="body_container">
     <%= yield %>
-    </div>]
-
   </body>
+  </div>
 </html>
 

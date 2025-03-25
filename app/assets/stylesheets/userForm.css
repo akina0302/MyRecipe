@@ -1,9 +1,12 @@
 /* 新規登録 */
+h2{
+  margin-top: 20px
+}
+
 
 .registration__image{
-  width: 50;
+  width: 50px
   height:50px;
-  margin: 30px auto;
  }
  
  .userRegistration__container {
@@ -14,12 +17,6 @@
    width: 70%;
    max-width: 800px;
    margin: 0px auto;
- }
- 
- h1 {
-   font-size: 24px;
-   color: #333;
-   margin-bottom: 20px;
  }
  
  .field {
@@ -44,7 +41,7 @@
  }
  
  .field input:focus {
-   border: 1px solid #007bff;
+   border: 1px solid #f9c178;
    background: white;
  }
  
@@ -58,7 +55,7 @@
    padding: 12px;
    border: none;
    border-radius: 8px;
-   background: #95dcea;
+   background:#f9c178;
    color:black;
    font-size: 16px;
    font-weight: bold;
@@ -66,4 +63,7 @@
    transition: 0.3s;
  }
  
+ .userform_link{
+  margin-bottom: 10px;
+ }
  
