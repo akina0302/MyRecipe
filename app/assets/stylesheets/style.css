@@ -1,31 +1,26 @@
-.body {
-  min-height: 100vh;
-}
 
 .body_container{
   display: flex;
   flex-direction: column;
-  /* padding: 1rem 0; */
+  padding: 1rem 0;
   width: 100%;
+  height: 100%;
   max-width: 800px; /* PCでも一定の大きさを保つ */
   margin: 0 auto;
   min-height: 100vh;
-}
+  background-color: #FADBA0;
+ }
 
-.recipe_container{
-  padding: 16px 32px;
-}
-
+ .main_container{
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+  font-weight: 100;
+  font-style: normal;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+ }
 
 /* ヘッダー */
-.header-log{
- font-size: 24px;
- display: flex;
- justify-content: center;
- padding-top: 8px;
-}
-
-/* ヘッダー２ */
 .main_header{
   font-size: 16px;
   display: flex;
