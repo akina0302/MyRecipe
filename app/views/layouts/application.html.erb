@@ -13,16 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Roboto:ital,wght@0,100;1,100&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
   </head>
 
-  <body class= "body_container">
-  <div class = "main_container">
+  <body>
     <header>
-      <h1>
-        <%= link_to "MyRecipe",root_path %>
-      </h1>
+       <%= link_to "MyRecipe",root_path , class: 'site_title'%>
     </header>
-
+    <div class='main_container'>
     <%= yield %>
+    </div>
+
   </body>
-  </div>
 </html>
 

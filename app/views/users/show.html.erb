@@ -1,7 +1,28 @@
 <div class="recipe_container">
-<div class="main_header">
-<%= render "shared/header" %>
-</div>
+  <div class="main_header">
+  <%= render "shared/header" %>
+  </div>
 </div>
 
-マイページ
+
+<%# レシピ一覧 %>
+<ul class = 'recipe-lists'>
+    <% if @recipe.present? %>
+    <% @recipe.each do |recipe| %>
+        <li class = 'list'>
+           <div class = 'recipe-img-content'>
+              <%= link_to recipe_path(recipe) do  %>
+                <% if recipe.image.attached? %>
+                <%= image_tag recipe.image, class: "recipe-img"  %>
+                <%else %>
+                <%= image_tag 'no_image.jpg',class: "recipe-img" %>
+                <% end %>
+              <% end %>
+              <div class = 'recipe-name'>
+              <%= recipe.name%>
+              </div>
+           </div> 
+        </li>
+      <% end %>
+    <% end%>
+</ul>

@@ -1,8 +1,8 @@
 <%# <div class="form_wrapper"> %>
   
-  <h2>sign up </h2>
-  <%= image_tag 'catorary.png',class: "registration__image" %>
 
+  <%= image_tag 'catorary.png',class: "registration__image" %>
+  
  <div class="userRegistration__container">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
