@@ -6,6 +6,7 @@
 
 
 <%# レシピ一覧 %>
+<div>
 <ul class = 'recipe-lists'>
     <% if @recipe.present? %>
     <% @recipe.each do |recipe| %>
@@ -26,3 +27,4 @@
       <% end %>
     <% end%>
 </ul>
+</div>
