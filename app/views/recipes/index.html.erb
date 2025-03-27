@@ -30,7 +30,9 @@
       <ul>
         <% (cooking_dates || []).each do |cooking_date| %> 
          <% cooking_date.recipes.each do |recipe|%>
-         <li><%= link_to recipe.name , recipe_path(recipe) %></li> 
+         <li>
+          <%= link_to recipe.name , recipe_path(recipe) %>
+         </li> 
          <% end %>        
         <% end %>
       </ul>

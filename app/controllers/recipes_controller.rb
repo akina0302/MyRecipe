@@ -57,7 +57,6 @@ class RecipesController < ApplicationController
 
   def set_recipe
     @recipe = Recipe.find_by(id: params[:id] )
-    # @recipe = Recipe.find_by(id: params[:id] , user_id: current_user.id)
   end
 
   def recipe_user
