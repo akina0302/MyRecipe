@@ -33,12 +33,6 @@ class RecipeCategoryMaterial
 
     material = Material.find_or_create_by(material_name: material_name)
     category = Category.find_or_create_by(category_name: category_name)
-
-    if image.nil?
-      image = recipe.image.blob if recipe.image.attached?
-    end
-
-
     recipe.update(
       name: name,
       procedure: procedure,
@@ -46,11 +40,9 @@ class RecipeCategoryMaterial
       user_id: user_id,
       material_id: material.id,
       category_id: category.id,
-      # image: image
+      image: image
       )
+   end
 
-      # ActiveStorage の画像は別途アタッチする必要がある
-       recipe.image.attach(image) if image.present?
-    end
 end
 
