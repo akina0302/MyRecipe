@@ -37,6 +37,13 @@ https://myrecipe-c6bz.onrender.com
 [要件定義シート](https://docs.google.com/spreadsheets/d/1SHLak4_GSEd0XBd2vHww_Fz3yATfDW4eCqe-rpOVJd0/edit?usp=sharing)
 
 ## 機能の紹介
+## 画面紹介(一部)
+
+|**トップページ（カレンダー表示）**|**レシピ詳細表示**          |      **マイページ**       |     **レシピ登録**      |      **レシピ編集**      |
+|:-----------------------------:|:-------------------------:|:------------------------:|:----------------------:|:------------------------:|
+|                               |                           |                          |                        |                         |
+
+
 
 
 ## 実装予定の機能
@@ -47,7 +54,7 @@ https://myrecipe-c6bz.onrender.com
 [![Image from Gyazo](https://i.gyazo.com/bd587cf23dd5e4a0e09ee6415173cb51.png)](https://gyazo.com/bd587cf23dd5e4a0e09ee6415173cb51)
 
 ## 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/17f04b9351e42faef05c6c6e6b30d52d.png)](https://gyazo.com/17f04b9351e42faef05c6c6e6b30d52d)
+[![Image from Gyazo](https://i.gyazo.com/8f1179b238447d87a3c74a2fd5524238.png)](https://gyazo.com/8f1179b238447d87a3c74a2fd5524238)
 
 ## 開発環境
 | カテゴリー | 使用技術 | 
