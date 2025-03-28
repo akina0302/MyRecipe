@@ -26,8 +26,6 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    # recipe_attributes = @recipe.attributes
-    # @recipe_category_material = RecipeCategoryMaterial.new(recipe_attributes)
     @recipe_category_material = RecipeCategoryMaterial.new(@recipe.attributes)
     @recipe_category_material.image = @recipe.image if @recipe.image.attached? # 画像データを引き継ぐ
   end
