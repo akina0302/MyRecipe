@@ -26,15 +26,18 @@ class RecipesController < ApplicationController
   end
 
   def edit
-    recipe_attributes = @recipe.attributes
-    @recipe_category_material = RecipeCategoryMaterial.new(recipe_attributes)
+    @recipe_category_material = RecipeCategoryMaterial.new(@recipe.attributes)
+    @recipe_category_material.image = @recipe.image if @recipe.image.attached? # 画像データを引き継ぐ
   end
 
   def update
     @recipe_category_material = RecipeCategoryMaterial.new(recipe_params)
-
     #画像を変更しない場合は既存の画像をセットする
-    @recipe_category_material.image ||= @recipe.image if @recipe.image.attached?
+    @recipe_category_material.image = if recipe_params[:image].present?
+      recipe_params[:image] # 新しい画像をセット
+    elsif @recipe.image.attached?
+      @recipe.image.blob # 既存の画像をセット
+    end
 
     if @recipe_category_material.valid?
       @recipe_category_material.update(@recipe.id)

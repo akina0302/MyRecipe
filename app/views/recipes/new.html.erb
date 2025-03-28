@@ -1,2 +1,9 @@
-<h1>レシピ作成</h1>
+<h1 class="form_title">レシピ作成</h1>
+
+<div class = "form__wrapper">
 <%= render partial:'form', locals:{url: recipes_path,method: :post} %>
+</div>
+
+<div>
+<%= link_to "戻る" , root_path %>
+</div>
