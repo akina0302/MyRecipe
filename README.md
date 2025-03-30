@@ -9,6 +9,8 @@
 https://myrecipe-c6bz.onrender.com
 
 テスト用アカウント</br>
+メールアドレス：test1@gmail.com
+パスワード：test1111
 
 
 ## 利用方法
