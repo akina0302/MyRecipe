@@ -50,6 +50,7 @@ https://myrecipe-c6bz.onrender.com
 
 
 ## 実装予定の機能
+- viewの整備
 - 検索機能
 - スタンプ機能
 
