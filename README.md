@@ -9,7 +9,7 @@
 https://myrecipe-c6bz.onrender.com
 
 テスト用アカウント</br>
-メールアドレス：test1@gmail.com
+メールアドレス：test1@gmail.com</br>
 パスワード：test1111
 
 
