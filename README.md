@@ -66,7 +66,7 @@ https://myrecipe-c6bz.onrender.com
 | フロントエンド | HTML/CSS | 
 | バックエンド | Ruby3.2.0, Rails7.1.5.1 |
 | データベース | PostgreSQL 16 |
-| 本番環境 | |
+| 本番環境 | Render |
 
 ## 工夫したポイント
 - 登録内容は手間にならないようなるべくシンプルに。
