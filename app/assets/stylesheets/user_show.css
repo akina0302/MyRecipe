@@ -1,31 +1,34 @@
 /* レシピ一覧 */
 
+.recipe-lists{
+  display: flex;
+  flex-wrap: wrap;
+  width: 800px;
+}
 
-
-.list{
+.photo-frame {
   position: relative;
+  font-weight: bold;
+}
+.photo-frame  {
   display: block;
-  width:60%;
-  height: 300px;
-  margin-inline:auto;
-  background: white;
-  padding: 20px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 245px;
+  height: 245px;
+  background: #fff;
+  padding: 10px 10px 40px; 
+  margin: 10px;
+  box-shadow: 0 4px 10px #333;
   text-align: center;
-  margin-top: 30px;
 }
 
-.recipe-img-content{
-  width: 100%;
-  /* aspect-ratio: 1 / 1; */
-  object-fit: cover;
+ /*　画面サイズが800pxまではここを読み込む　*/
+@media screen and (max-width:800px) {
+ 
+  .recipe-lists {
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* 縦並び */
+    width: 100%; /* 画面幅 */
 }
 
-.recipe-name{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 14px;
-  color: #555;
-  font-family: cursive;
 }

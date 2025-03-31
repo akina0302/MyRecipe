@@ -11,12 +11,12 @@
     <% if @recipe.present? %>
     <% @recipe.each do |recipe| %>
         <li class = 'list'>
-           <div class = 'recipe-img-content'>
+           <div class = 'photo-frame'>
               <%= link_to recipe_path(recipe) do  %>
                 <% if recipe.image.attached? %>
-                <%= image_tag recipe.image, class: "recipe-img"  %>
+                <%= image_tag recipe.image.variant(resize: '230x200!') %>
                 <%else %>
-                <%= image_tag 'no_image.jpg',class: "recipe-img" %>
+                <%= image_tag 'no_image.jpg', size: '230x200' %>
                 <% end %>
               <% end %>
               <div class = 'recipe-name'>
