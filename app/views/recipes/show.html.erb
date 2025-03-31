@@ -3,9 +3,30 @@
    <%= render "shared/header" %>
   </div>
 
-<%= @recipe.name %>
-<%= link_to "編集", edit_recipe_path(@recipe.id) %>
-<%= link_to "削除",recipe_path, data: {turbo_method: :delete}%>
+<div class="recipeShow__container">
+  <div class="recipeShow__header">
+    <h1><%= @recipe.name %></h1>
+    <div class="recipeShow__actions">
+      <%= link_to "編集", edit_recipe_path(@recipe.id), class: "recipeShow__edit_button" %>
+      <%= link_to "削除", recipe_path(@recipe.id), data: { turbo_method: :delete, confirm: "本当に削除しますか？" }, class: "recipeShow__delete_button" %>
+    </div>
+  </div>
 
+  <div class="recipeShow__image">
+    <% if @recipe.image.attached? %>
+      <%= image_tag @recipe.image.variant(resize: '600x400!'), alt: @recipe.name %>
+    <% else %>
+      <%= image_tag "no_image.jpg", alt: "画像なし" %>
+    <% end %>
+  </div>
 
-
+  <div class="recipeShow__details">
+    <p><strong>カテゴリー:</strong> <%= @recipe.category.category_name %></p>
+    <p><strong>URL:</strong> <%= link_to @recipe.url, @recipe.url, target: "_blank", rel: "noopener noreferrer" %></p>
+    <p><strong>材料:</strong> <%= @recipe.material.material_name %></p>
+    <p><strong>作り方:</strong></p>
+    <div class="recipeShow__procedure">
+      <%= simple_format(@recipe.procedure) %>
+    </div>
+  </div>
+</div>
