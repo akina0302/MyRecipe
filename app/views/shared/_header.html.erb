@@ -1,13 +1,13 @@
 <div class = 'button'>
-<%= image_tag 'kitchentool1.png',class: "image_button" %>
-<%= link_to "レシピ登録", new_recipe_path%>
+<%= link_to image_tag("kitchentool1.png"),new_recipe_path %>
+<%= link_to "レシピ登録", new_recipe_path %>
 </div>
 <div class = 'button'>
-<%= image_tag 'kitchentool2.png',class: "image_button" %>
+<%= link_to image_tag('kitchentool2.png'),user_path(current_user.id) %>
 <%= link_to "レシピ一覧", user_path(current_user.id) %>
 </div>
 <div class = 'button'>
-<%= image_tag 'kitchentool3.png',class: "image_button" %>
+<%= link_to image_tag('kitchentool3.png'),destroy_user_session_path,data: {turbo_method: :delete} %>
 <%= link_to "ログアウト", destroy_user_session_path,data: {turbo_method: :delete} %> 
 </div>
 

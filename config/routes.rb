@@ -4,6 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: :show
   resources :recipes
   resources :cooking_dates, only: :create 
-  resources :recipe_cookingdates , only: :destroy
 end
 

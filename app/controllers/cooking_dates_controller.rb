@@ -8,7 +8,7 @@ class CookingDatesController < ApplicationController
       redirect_to root_path
     end
   end
-
+  
   private
   
   def cooking_date_params
