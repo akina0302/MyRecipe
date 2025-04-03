@@ -6,11 +6,15 @@
 このアプリは、レシピの登録・管理を行い、1週間分の献立を作成できるアプリです。献立はカレンダー上に表示され、計画的な食事管理をサポートします
 
 ## URL
-https://myrecipe-c6bz.onrender.com
+https://myrecipe-8zpg.onrender.com
 
 テスト用アカウント</br>
-メールアドレス：test1@gmail.com</br>
-パスワード：test1111
+- メールアドレス：test1@gmail.com</br>
+- パスワード：test1111
+
+Basic認証</br>
+- ID : admin
+- Pass : 2222
 
 
 ## 利用方法
