@@ -83,3 +83,4 @@ gem 'image_processing','~> 1.2'
 gem "aws-sdk-s3", require: false
 gem "simple_calendar"
 gem 'sassc-rails'
+gem "bullet", "~> 8.0", :group => :development
