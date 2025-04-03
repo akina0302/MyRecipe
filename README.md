@@ -59,7 +59,7 @@ Basic認証</br>
 - スタンプ機能
 
 ## データベース設計
-[![Image from Gyazo](https://i.gyazo.com/bd587cf23dd5e4a0e09ee6415173cb51.png)](https://gyazo.com/bd587cf23dd5e4a0e09ee6415173cb51)
+[![Image from Gyazo](https://i.gyazo.com/e2ee9b07672d53920aec613088f4dc0d.png)](https://gyazo.com/e2ee9b07672d53920aec613088f4dc0d)
 
 ## 画面遷移図
 [![Image from Gyazo](https://i.gyazo.com/8f1179b238447d87a3c74a2fd5524238.png)](https://gyazo.com/8f1179b238447d87a3c74a2fd5524238)
