@@ -46,9 +46,9 @@ Basic認証</br>
 ## 機能の紹介
 ## 画面紹介(一部)
 
-|**トップページ（カレンダー表示）**|**レシピ詳細表示**          |      **マイページ**       |     **レシピ登録**      |      **レシピ編集**      |
+|**トップページ（カレンダー表示）**|**レシピ詳細表示**          |      **レシピ一覧表示**       |     **レシピ登録**      |      **レシピ編集**      |
 |:-----------------------------:|:-------------------------:|:------------------------:|:----------------------:|:------------------------:|
-|                               |                           |                          |                        |                         |
+|[![Image from Gyazo](https://i.gyazo.com/ff33cdebba4bc631ce13015e32abf52d.png)](https://gyazo.com/ff33cdebba4bc631ce13015e32abf52d)|[![Image from Gyazo](https://i.gyazo.com/42fc034c0a1394324050b450e1596e80.png)](https://gyazo.com/42fc034c0a1394324050b450e1596e80)| [![Image from Gyazo](https://i.gyazo.com/9b4d7ddf2e28c2eac4a75b6040bd0e14.png)](https://gyazo.com/9b4d7ddf2e28c2eac4a75b6040bd0e14)|[![Image from Gyazo](https://i.gyazo.com/074bc206c34e61a3a4376cdb9a135f44.png)](https://gyazo.com/074bc206c34e61a3a4376cdb9a135f44)|[![Image from Gyazo](https://i.gyazo.com/e048861198d3cbdd74bbd158f369684f.png)](https://gyazo.com/e048861198d3cbdd74bbd158f369684f)|
 
 
 

@@ -20,13 +20,13 @@
     <% end %>
   </div>
 
-  <div class="recipeShow__details">
-    <p><strong>カテゴリー:</strong> <%= @recipe.category.category_name %></p>
-    <p><strong>URL:</strong> <%= link_to @recipe.url, @recipe.url, target: "_blank", rel: "noopener noreferrer" %></p>
-    <p><strong>材料:</strong> <%= @recipe.material.material_name %></p>
-    <p><strong>作り方:</strong></p>
+  <ul class="recipeShow__details">
+    <li><strong>カテゴリー:</strong> <%= @recipe.category.category_name %></li>
+    <li style="word-break: break-all;"><strong>URL:</strong> <%= link_to @recipe.url, @recipe.url, target: "_blank", rel: "noopener noreferrer" %></li>
+    <li><strong>材料:</strong> <%= @recipe.material.material_name %></li>
+    <li><strong>作り方:</strong></li>
     <div class="recipeShow__procedure">
       <%= simple_format(@recipe.procedure) %>
     </div>
-  </div>
+  </ul>
 </div>
